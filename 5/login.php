@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     </head>
 
     <body>
-        <form action="" method="POST" class="login">
+        <form action="" method="POST" class="login-block">
             <div>
                 Логин:<input name="login" />
             </div>
