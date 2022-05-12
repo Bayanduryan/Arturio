@@ -42,7 +42,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $powers = $db->prepare("SELECT distinct name from powersowners join teampowers pow on power_id = pow.id where owner_id = ?");
         $powers->execute(array($member_id));
         $result = $powers->fetchAll(PDO::FETCH_ASSOC);
-        $values['select'] = implode(',', $result);
+        $str = "";
+        foreach ($powers as $power) {
+             $str .= $power['name'] . ',';
+        }
+        $values['select'] = substr_replace($str,0,-1);
     } else {
         $name = $_POST['name'];
         $email = $_POST['email'];
@@ -159,8 +163,8 @@ if (!empty($_SERVER['PHP_AUTH_USER']) && !empty($_SERVER['PHP_AUTH_PW'])) {
                 <th>Имя</th>
                 <th>Email</th>
                 <th>Дата рождения</th>
-                <th>Пол</th>
                 <th>Конечности</th>
+                <th>Пол</th>
                 <th>Команда</th>
                 <th>Биография</th>
             </tr>
@@ -183,7 +187,7 @@ if (!empty($_SERVER['PHP_AUTH_USER']) && !empty($_SERVER['PHP_AUTH_PW'])) {
                             foreach ($superpowers as $power) {
                                 $str .= $power['name'] . ',';
                             }
-                            echo $str;
+                            echo substr_replace($str,0,-1);;
                             ?>
                         </td>
                         <td id="bio">
