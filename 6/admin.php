@@ -46,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         foreach ($powers as $power) {
              $str .= $power['name'] . ',';
         }
-        $values['select'] = substr_replace($str,0,-1);
+        $values['select'] = substr_replace($str,'',-1);
     } else {
         $name = $_POST['name'];
         $email = $_POST['email'];
@@ -187,7 +187,7 @@ if (!empty($_SERVER['PHP_AUTH_USER']) && !empty($_SERVER['PHP_AUTH_PW'])) {
                             foreach ($superpowers as $power) {
                                 $str .= $power['name'] . ',';
                             }
-                            echo substr_replace($str,0,-1);;
+                            echo substr_replace($str,'',-1);;
                             ?>
                         </td>
                         <td id="bio">
