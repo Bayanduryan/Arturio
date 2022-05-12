@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form-container {
+    padding: 10px;
+    border: 2px solid #7d5d36;
+    border-radius: 3px;
+}
+
+.block {
+    margin-bottom: 7px;
+}
+
+.radios {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+}
+
+.policy .form-check-label a {
+    color: #7ca2b7;
+}
+
+#send-btn {
+    width: 100%;
+    background-color: #7ca2b7 !important;
+    border-color: #7ca2b7 !important;
+}
+
+.form-container input:focus, .form-container textarea:focus {
+    outline: none !important;
+    border: 1px solid #d6bf9d !important;
+    box-shadow: 0 0 10px #d6bf9d !important;
+}
+
+.error {
+    color: rgba(245, 46, 46, 1);
+}
+
+.login-block {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    border: 1px solid #d6bf9d;
+    box-shadow: 0 5px 10px #d6bf9d;
+
+    padding: 10px 20px;
+}
+
+.login-block div {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 5px;
+}
+
+
+.records-list {
+    padding: 30px 40px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table td {
+    border: 2px solid #d6bf9d;
+    border-collapse: collapse;
+}
+
+td, th {
+    font-size: 13px;
+    padding: 0px 8px;
+}
+
+table th {
+    font-size: 15px;
+    color: #fff;
+    background: #7ca2b7;
+    height: 30px;
+}
+
+#bio {
+    width: 300px;
+}
+
+.edit-buttons {
+    width: 60px;
+    border: none;
+}
+
+.edit-buttons form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit-buttons form button {
+    padding: 5px;
+    transition: 250ms;
+}
+
+#edit {
+    color: #7ca2b7;
+    background-color: #fff;
+    border: 1px solid #7ca2b7;
+    border-radius: 7px;
+}
+
+#delete {
+    color: #e05b66;
+    background-color: #fff;
+    border: 1px solid #e05b66;
+    border-radius: 7px;
+}
+
+#delete:hover {
+    background-color: #e05b66;
+    color: #fff;
+}
+
+#edit:hover {
+    background-color: #7ca2b7;
+    color: #fff;
+}
